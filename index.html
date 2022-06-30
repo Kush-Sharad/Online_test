@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Online Test Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <!-- start Quiz button -->
+    <div class="start_btn"><button>Click here to start Test</button></div>
+
+    <!-- Info Box -->
+    <div class="info_box">
+        <div class="info-title"><span>Guidlines for the Test:
+
+        </span></div>
+        <div class="info-list">
+            <div class="info">1. The test contains all multiple choice question.</div>
+            <div class="info">2. Each question has one correct option.</div>
+            <div class="info">3. Once you select your answer, it can't be change.</div>
+            <div class="info">4. You will have only 15 seconds per each question.</div>
+            <div class="info">5. You will get your score on the basis of your correct answers at the end of the test .</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Test</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz Box -->
+    <div class="test_box">
+        <header>
+            <div class="title">Online Test Portal</div>
+            <div class="timer">
+                <div class="time_left_txt">Time Left</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+            </div>
+            <div class="option_list">
+            </div>
+        </section>
+
+        <footer>
+            <div class="total_que">
+                <!-- Here I've inserted Question Count Number from JavaScript -->
+            </div>
+            <button class="next_btn">Next Question</button>
+        </footer>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You have completed the Test!</div>
+        <div class="score_text">
+            <!-- Here I've inserted Score Result from JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Restart Test</button>
+            <button class="quit">Exit Test</button>
+        </div>
+    </div>
+
+
+    <script src="ques.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
