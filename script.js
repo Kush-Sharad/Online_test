@@ -1,4 +1,5 @@
 //selecting all required elements
+const note_para = document.querySelector(".note_para");
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
 const exit_btn = info_box.querySelector(".buttons .quit");
@@ -10,17 +11,17 @@ const time_line = document.querySelector("header .time_line");
 const timeText = document.querySelector(".timer .time_left_txt");
 const timeCount = document.querySelector(".timer .timer_sec");
 
-// if startQuiz button clicked
+//  start test button 
 start_btn.onclick = ()=>{
     info_box.classList.add("activeInfo"); //show info box
 }
 
-// if exitQuiz button clicked
+// exit test button 
 exit_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
 }
 
-// if continueQuiz button clicked
+// continue test button 
 continue_btn.onclick = ()=>{
     info_box.classList.remove("activeInfo"); //hide info box
     test_box.classList.add("activeQuiz"); //show quiz box
@@ -41,7 +42,7 @@ let widthValue = 0;
 const restart_test = result_box.querySelector(".buttons .restart");
 const quit_test = result_box.querySelector(".buttons .quit");
 
-// if restartQuiz button clicked
+// restarttest  button
 restart_test.onclick = ()=>{
     test_box.classList.add("activeTest"); //show quiz box
     result_box.classList.remove("activeResult"); //hide result box
@@ -60,7 +61,7 @@ restart_test.onclick = ()=>{
     next_btn.classList.remove("show"); //hide the next button
 }
 
-// if quitQuiz button clicked
+//  Quit test button 
 quit_test.onclick = ()=>{
     window.location.reload(); //reload the current window
 }
@@ -68,7 +69,7 @@ quit_test.onclick = ()=>{
 const next_btn = document.querySelector("footer .next_btn");
 const bottom_ques_counter = document.querySelector("footer .total_que");
 
-// if Next Que button clicked
+//  Next Question button 
 next_btn.onclick = ()=>{
     if(que_count < questions.length - 1){ //if question count is less than total question length
         que_count++; //increment the que_count value
@@ -112,7 +113,7 @@ function showQuetions(index){
 let tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>';
 let crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
 
-//if user clicked on option
+//user clicked on option
 function optionSelected(answer){
     clearInterval(counter); //clear counter
     clearInterval(counterLine); //clear counterLine
@@ -147,19 +148,19 @@ function optionSelected(answer){
 
 function showResult(){
     info_box.classList.remove("activeInfo"); //hide info box
-    test_box.classList.remove("activeTest"); //hide quiz box
+    test_box.classList.remove("activeTest"); //hide test box
     result_box.classList.add("activeResult"); //show result box
     const scoreText = result_box.querySelector(".score_text");
-    if (userScore > 3){ // if user scored more than 3
+    if (userScore > 6){ // if user scored more than 6
         //creating a new span tag and passing the user score number and total question number
         let scoreTag = '<span>and congrats! , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;  //adding new span tag inside score_Text
     }
-    else if(userScore > 1){ // if user scored more than 1
+    else if(userScore > 4){ // if user scored more than 4
         let scoreTag = '<span>and nice , You got <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }
-    else{ // if user scored less than 1
+    else{ // if user scored less than 4
         let scoreTag = '<span>and sorry , You got only <p>'+ userScore +'</p> out of <p>'+ questions.length +'</p></span>';
         scoreText.innerHTML = scoreTag;
     }

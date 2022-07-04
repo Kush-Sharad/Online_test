@@ -7,14 +7,22 @@
 }
 
 body{
-    background: #6dd7f7;
+    background-color: #6dd7f7;
+    background-image: url(onlinetest.jpg);
+    background-size: 750px 580px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right center;
+
 }
+
 
 ::selection{
     color: #fff;
     background: #6dd7f7;
 }
 
+.note_para,
 .start_btn,
 .info_box,
 .test_box,
@@ -35,6 +43,14 @@ body{
     pointer-events: auto;
     transform: translate(-50%, -50%) scale(1);
 }
+.note_para {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: -420px;
+    margin-top: 250px;
+    background-color: #149bb9;
+}
 
 .start_btn button{
     font-size: 25px;
@@ -46,11 +62,13 @@ body{
     border-radius: 5px;
     background: #fff;
     cursor: pointer;
+    position: relative;
+    margin-left: -550px;
 }
 
 .info_box{
     width: 540px;
-    background: #fff;
+    background: rgb(218, 169, 224);
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -108,7 +126,7 @@ body{
 
 .test_box{
     width: 550px;
-    background: #fff;
+    background: rgb(218, 169, 224);
     border-radius: 5px;
     transform: translate(-50%, -50%) scale(0.9);
     opacity: 0;
@@ -121,7 +139,7 @@ body{
     z-index: 2;
     height: 70px;
     padding: 0 30px;
-    background: #fff;
+    background: rgb(218, 169, 224);
     border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
@@ -177,7 +195,7 @@ body{
 
 section{
     padding: 25px 30px 20px 30px;
-    background: #fff;
+    background: rgb(218, 169, 224);
 }
 
 section .que_text{
